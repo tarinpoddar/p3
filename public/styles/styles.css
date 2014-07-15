@@ -13,8 +13,24 @@
 }
 
 .links{
-	text-align: center;
 	font-family: Monaco, Consolas, "Lucida Console", monospace;
 	font-size: 30px;
+	
+}
+
+.section{
+	text-align: center;
 	margin-top: 40px;
+}
+
+.text{
+	font-family: "Big Caslon", "Book Antiqua", "Palatino Linotype", Georgia, serif;
+	font-size: 25px;
+}
+
+.userinfo{
+	font-family: "Big Caslon", "Book Antiqua", "Palatino Linotype", Georgia, serif;
+	font-size: 33px;
+	text-align: center;
+	background-color: red;
 }
