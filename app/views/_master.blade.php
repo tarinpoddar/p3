@@ -13,16 +13,11 @@
 
 <body>
 
-	
 		<a id="homelink" href='/'>&larr; Home</a>
 
 		@yield('content')
 		
 		@yield('body')
-
-		
-		
-		
 	
 </body>
 
