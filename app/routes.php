@@ -31,12 +31,18 @@
 		
 		$generator = new Badcow\LoremIpsum\Generator();
 		$paragraphs = $generator->getParagraphs($num_paras);
-		
-		return View::make('lorem_ipsum_generator')->with('paragraphs', $paragraphs);
 
+		if ($paragraphs > 0)
+		{
+			$num = true;
+		}
+		else
+		{
+			$num = false;
+		}
 
-		
-		
+		return View::make('lorem_ipsum_generator')->with('paragraphs', $paragraphs)
+												  ->with('num', $num);
 	});
 
 	Route::get('/random_user_generator', function()

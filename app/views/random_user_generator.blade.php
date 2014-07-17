@@ -46,10 +46,11 @@
 
 		@if (isset($user_req['num_users']))
 
+		<h2 class="subheading" id="sub_user">  Here are your users </h2>
+
 			@for ($i = 0; $i < $user_req['num_users']; $i++)
 
-			<h2 class="subheading" id="sub_user">  Here are your users </h2>
-     		
+     		<p class="userinfo">
 				{{ $names[$i] }} <br>
 				
 				@if ($user_req['is_dob'])
@@ -60,7 +61,7 @@
 
 				@if ($user_req['is_address'])
 
-					{{ $addresses[$i] }} <br>
+					{{ $addresses[$i] }} <br> <br>
 
 				@endif	
 
@@ -69,7 +70,7 @@
 					{{ $profile[$i] }} <br>
 
 				@endif	
-
+			</p>	
 
 				@if ($user_req['is_img'])
 

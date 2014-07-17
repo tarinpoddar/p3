@@ -22,7 +22,7 @@
 
 .section{
 	text-align: center;
-	margin-top: 40px;
+	margin-top: 55px;
 }
 
 .text{
@@ -31,10 +31,10 @@
 }
 
 .userinfo{
-	font-family: "Big Caslon", "Book Antiqua", "Palatino Linotype", Georgia, serif;
-	font-size: 33px;
+	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+	font-size: 20px;
 	text-align: center;
-	background-color: red;
+	margin-top: 60px;
 }
 
 #textbox{
@@ -98,4 +98,17 @@
 	font-size: 15px;
 	font-family: "Big Caslon", "Book Antiqua", "Palatino Linotype", Georgia, serif;
 	color: black;
+}
+
+img{
+	width:400px; /* you can use % */
+    height: auto;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#homelink{
+	display: block;
+	margin:10px;
 }

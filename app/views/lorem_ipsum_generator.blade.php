@@ -31,8 +31,9 @@
 
 
 
-@if ($paragraphs)
+@if (isset($paragraphs))
 	<h2 class="subheading"> Here is your Lorem Ipsum text </h2>
+
 	
 	@foreach($paragraphs as $paragraph)
 		<p class="info"> {{ $paragraph }} </p>
