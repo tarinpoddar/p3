@@ -14,28 +14,28 @@
 
 	<h1 class="headings"> Lorem Ipsum Generator </h1>
 	<p class="info"> 
-		To generate lorem ipsum text, please retype the link in your brower. <br>
-		 Add a slash in the current link, write the number of paragraphs you want and press enter
+		How many paragraphs? (max 99)
 	</p>
 
 
 	{{ Form::open(array('url' => '/lorem_ipsum_generator', 'method' => 'GET')) }}
 
-		Search: 
-		{{ Form::text('number_of_paras') }}
-		
-		{{ Form::submit('Go!') }}
-	
+		<div class="loremform">
+		<input id="textbox" maxlength=2 type="text" placeholder="#" name="number_of_paras">
+		<span id="lorembutton">
+		{{ Form::submit('Get Me!') }}
+	</span>
+		</div>
 	{{ Form::close() }}
 
 
 
 
-@if (isset($paragraphs))
-	<h1 class="headings"> Here is your Lorem Ipsum text </h1>
+@if ($paragraphs)
+	<h2 class="subheading"> Here is your Lorem Ipsum text </h2>
 	
 	@foreach($paragraphs as $paragraph)
-	<p class="info"> {{ $paragraph }} </p>
+		<p class="info"> {{ $paragraph }} </p>
 	@endforeach
 
 @endif

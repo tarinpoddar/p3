@@ -16,7 +16,12 @@
 	@yield('content')
 	
 	@yield('body')
-		
+
+	<!--
+	<div class="bottom">
+		<p class="footer">Tarin Poddar <br> tarinpoddar27@gmail.com</p>
+	</div>
+	-->	
 </body>
 
 </html>
