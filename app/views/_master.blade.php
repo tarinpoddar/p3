@@ -13,17 +13,17 @@
 
 <body>
 
-	<a id="homelink" href='/'>&larr; Home</a>
-
-	@yield('content')
 	
-	@yield('body')
+		<a id="homelink" href='/'>&larr; Home</a>
 
-	<!--
-	<div class="bottom">
-		<p class="footer">Tarin Poddar <br> tarinpoddar27@gmail.com</p>
-	</div>
-	-->	
+		@yield('content')
+		
+		@yield('body')
+
+		
+		
+		
+	
 </body>
 
 </html>

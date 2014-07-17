@@ -87,18 +87,6 @@
 	display: block;
 }
 
-.bottom
-{
-	margin-top: 35px;
-}
-
-.footer
-{
-	text-align: center;
-	font-size: 15px;
-	font-family: "Big Caslon", "Book Antiqua", "Palatino Linotype", Georgia, serif;
-	color: black;
-}
 
 img{
 	width:400px; /* you can use % */

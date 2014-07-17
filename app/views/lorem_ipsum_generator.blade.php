@@ -19,7 +19,6 @@
 
 
 	{{ Form::open(array('url' => '/lorem_ipsum_generator', 'method' => 'GET')) }}
-
 		<div class="loremform">
 		<input id="textbox" maxlength=2 type="text" placeholder="#" name="number_of_paras">
 		<span id="lorembutton">
@@ -31,8 +30,8 @@
 
 
 
-@if (isset($paragraphs))
-	<h2 class="subheading"> Here is your Lorem Ipsum text </h2>
+@if ($should_show)
+	<h2 class="subheading"> Here is your Lorem Ipsum text: </h2>
 
 	
 	@foreach($paragraphs as $paragraph)

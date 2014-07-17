@@ -21,10 +21,18 @@
 	{
 		$num_paras = Input::get('number_of_paras');
 
-		
-		if (!isset($num_paras))
+		if ($num_paras > 0)
 		{
-			return View::make('lorem_ipsum_generator');
+			$should_show = true;
+		}
+		else
+		{
+			$should_show = false;
+		}
+
+		if (!$should_show)
+		{
+			return View::make('lorem_ipsum_generator')->with('should_show', $should_show);
 
 		}
 		
@@ -32,17 +40,10 @@
 		$generator = new Badcow\LoremIpsum\Generator();
 		$paragraphs = $generator->getParagraphs($num_paras);
 
-		if ($paragraphs > 0)
-		{
-			$num = true;
-		}
-		else
-		{
-			$num = false;
-		}
+		
 
 		return View::make('lorem_ipsum_generator')->with('paragraphs', $paragraphs)
-												  ->with('num', $num);
+												  ->with('should_show', $should_show);
 	});
 
 	Route::get('/random_user_generator', function()
@@ -56,9 +57,18 @@
 		$user_req['is_profile'] = Input::get('is_profile');
 
 
-		if(!isset($user_req['num_users']))
+		if($user_req['num_users'] > 0)
 		{
-			return View::make('random_user_generator');
+			$should_show = true;
+		}
+		else
+		{
+			$should_show = false;
+		}
+
+		if(!$should_show)
+		{
+			return View::make('random_user_generator')->with('should_show', $should_show);
 		}
 
 
@@ -133,7 +143,8 @@
 													  ->with('dobs', $dobs)
 													  ->with('addresses', $addresses)
 													  ->with('profile', $profile)
-													  ->with('images', $images);
+													  ->with('images', $images)
+													  ->with('should_show', $should_show);
 
 
 		}
